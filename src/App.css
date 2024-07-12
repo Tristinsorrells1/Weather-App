@@ -49,6 +49,7 @@ html {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  height: fit-content;
 }
 
 .weather-container > div > div {
@@ -92,11 +93,12 @@ html {
 
 .updated-time-text {
   font-style: italic;
+  color: rgb(45, 43, 43);
+  margin: 20px 0;
 }
 
 .location {
   font-size: 40px;
-  margin: 20px 0;
 }
 
 .temperature {

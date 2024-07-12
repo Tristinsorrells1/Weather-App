@@ -114,7 +114,7 @@ function App() {
   }, [coordinates]);
 
   return (
-    <main style={{ backgroundImage: `url(/clouds.png)` }}>
+    <main style={{ backgroundImage: `url(/clouds.png)`, backgroundSize: "cover" }}>
       <section className={forecast ? "search-bar-section" : "centered-search-bar-section"}>
         <div className="search-bar">
           <input
@@ -159,7 +159,6 @@ function App() {
               <span className="temp-unit">{forecast[0].temperatureUnit}</span>
             </div>
             <p className="detailed-forecast">{forecast[0].shortForecast}</p>
-            {forecastTime && <p className="updated-time-text">Updated as of {forecastTime}</p>}
             <div>
               <div>
                 <img className="small-icon" src="high.png" alt="high temperature icon"></img>
@@ -174,6 +173,7 @@ function App() {
                 <span>{`${forecast[0].windSpeed} ${forecast[0].windDirection}`}</span>
               </div>
             </div>
+            {forecastTime && <p className="updated-time-text">Updated as of {forecastTime}</p>}
           </div>
         </section>
       )}
