@@ -7,8 +7,8 @@
 [Process](#process) ~
 [Priorities](#priorities) ~
 [Future Enhancements](#future-enhancements) ~
-[Conclusion](#conclusion) ~
 [How to Run Locally](#how-to-run-locally)
+[Conclusion](#conclusion) ~
 
 ## Introduction
 First, thank you for the opportunity to demonstrate my technical skills through this coding challenge! This README will walk you through my typical process when creating a project from scratch and outline the priorities and future enhancements I considered during development.
@@ -42,14 +42,12 @@ While developing this app, I envisioned several features I would have loved to i
 - Day/Night UI: Implementing different UIs for daytime and nighttime to provide a more immersive experience.
 - Weather Animations: Adding animations corresponding to the day's weather (e.g., rain and lightning animations for rainy days) to make the app more engaging.
 
-## Conclusion
-Thank you again for this opportunity. This project reflects my commitment to delivering quality work within tight deadlines and my enthusiasm for continuous improvement. I look forward to presenting this project to you! 
-
 ## How to Run Locally
-- Clone Repo (git clone <SSH key>)
+- Clone this repo (git clone <SSH key>)
 - Visit this [Link](https://cors-anywhere.herokuapp.com/corsdemo) and click request temporary access to demo server
-- npm start
+- Run npm start
 
-
+## Conclusion
+Thank you again for this opportunity. I look forward to hopefully presenting this project to you! 
 
 
