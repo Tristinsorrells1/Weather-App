@@ -3,20 +3,18 @@
 ## Table of Contents
 
 [Introduction](#introduction) ~
+[Preview of App](#preview-of-app) ~
 [Process](#process) ~
 [Priorities](#priorities) ~
-[Preview of App](#preview-of-app) ~
-[Technologies](#technologies) ~
-[Contributors](#contributors) ~
-[Sources](#sources)
+[Future Enhancements](#future-enhacements) ~
+[Conclusion](#conclusion) ~
+[How to Run Locally](#how-to-run-locally)
 
 ## Introduction
 First, thank you for the opportunity to demonstrate my technical skills through this coding challenge! This README will walk you through my typical process when creating a project from scratch and outline the priorities and future enhancements I considered during development.
 
 ## Preview of App
 <img width="1433" alt="Screenshot 2024-07-11 at 7 38 19 PM" src="https://github.com/user-attachments/assets/4945c928-d786-404d-9aab-39a8e2c88710">
-
-
 
 ## Process
 1. Research and Documentation
@@ -46,6 +44,11 @@ While developing this app, I envisioned several features I would have loved to i
 
 ## Conclusion
 Thank you again for this opportunity. This project reflects my commitment to delivering quality work within tight deadlines and my enthusiasm for continuous improvement. I look forward to presenting this project to you! 
+
+## How to Run Locally
+- Clone Repo (git clone <SSH key>)
+- Visit this [Link](https://cors-anywhere.herokuapp.com/corsdemo) and click request temporary access to demo server
+- npm start
 
 
 
