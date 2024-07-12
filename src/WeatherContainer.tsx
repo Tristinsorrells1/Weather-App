@@ -1,10 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import {  ForecastType } from "./APICalls/APICalls";
 import WeatherCard  from "./WeatherCard"
-
-import { useEffect, useState } from "react";
 
 type WeatherContainerProps = {
   forecast: ForecastType["forecast"];

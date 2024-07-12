@@ -1,9 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { ForecastType } from "./APICalls/APICalls";
-
-import { useEffect, useState } from "react";
 
 type EvenIndexedForecast = {
   name: string;
@@ -23,7 +19,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ evenIndexedForecasts, weather
     <>
       {evenIndexedForecasts.map((forecast, index) => (
         <div className="card" key={index}>
-          <span>{forecast.name}</span>
+          <span>{forecast.name.split(" ")[0]}</span>
           <img src={weatherIcon(forecast.shortForecast)} alt={forecast.shortForecast}></img>
           <span className="short-forecast">{forecast.shortForecast}</span>
           <span>

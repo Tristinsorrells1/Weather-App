@@ -54,7 +54,6 @@ export const getLatAndLong = async (street: string, city: string, state: string)
   try {
     let response = await fetch(path);
     let json = await response.json();
-    console.log(json)
     let addressComponents = json.result.addressMatches[0].addressComponents;
     let coordinates = json.result.addressMatches[0].coordinates;
     return { address: addressComponents, coordinates };
@@ -66,18 +65,13 @@ export const getLatAndLong = async (street: string, city: string, state: string)
 
 export const getHighsAndLows = async (x: number, y: number): Promise<TemperatureType | undefined> => {
   try {
- 
     const gridDataResponse = await fetch(`https://api.weather.gov/points/${y},${x}`);
     const gridData = await gridDataResponse.json();
 
-
     const forecastGridDataUrl = gridData.properties.forecastGridData;
-
 
     const forecastDataResponse = await fetch(forecastGridDataUrl);
     const forecastData = await forecastDataResponse.json();
-
-    console.log(forecastData)
 
     const minTemperatureValues = forecastData.properties.minTemperature.values.map((value: any) => ({
       validTime: value.validTime,
@@ -115,7 +109,6 @@ export const getWeatherForecast = async (x: number, y: number): Promise<Forecast
       return response.json();
     })
     .then((response) => {
-      console.log(response)
       return response.properties.forecast;
     })
     .then((response) => {
@@ -125,7 +118,6 @@ export const getWeatherForecast = async (x: number, y: number): Promise<Forecast
       return response.json();
     })
     .then((response) => {
-      console.log(response)
       return { date: response.properties.generatedAt, forecast: response.properties.periods };
     })
     .catch((error) => {

@@ -1,5 +1,3 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import moment from "moment";
 import WeatherContainer from "./WeatherContainer";
@@ -19,7 +17,6 @@ function App() {
   const [state, setState] = useState<string | undefined>(undefined);
   const [error, setError] = useState<boolean>(false);
 
-
   useEffect(() => {
     if (forecast && temps) {
       convertTemps();
@@ -27,7 +24,7 @@ function App() {
   }, [forecast]);
 
   const weatherIcon = (forecast: string): string | undefined => {
-    if (forecast.includes("Sunny")) {
+    if (forecast.includes("Sunny") || forecast.includes("Clear")) {
       return "/sun.png";
     } else if (forecast.includes("Rain") || forecast.includes("Showers")) {
       return "/rain.png";
@@ -67,7 +64,6 @@ function App() {
     document.getElementById("city")?.classList.remove("error");
     document.getElementById("state")?.classList.remove("error");
 
-    // Check for empty inputs and highlight them
     if (!street) {
       document.getElementById("street")?.classList.add("error");
     }
@@ -90,39 +86,37 @@ function App() {
         });
         setCoordinates({
           x: res.coordinates.x,
-          y: res.coordinates.y
-        })
-        setError(false)
+          y: res.coordinates.y,
+        });
+        setError(false);
       } else {
-        setError(true)
+        setError(true);
       }
     });
   };
 
   useEffect(() => {
     if (coordinates && coordinates.x && coordinates.y) {
-   
-          getHighsAndLows(coordinates.x, coordinates.y).then((res) => {
-            if (res) {
-              setTemps(res);
-            }
-          });
-          getWeatherForecast(coordinates.x, coordinates.y).then((res) => {
-            if (res) {
-              let date = moment(res.date);
-              let formattedDate = date.format("MMMM Do [at] h:mma");
-              setForecastTime(formattedDate);
-              setForecast(res.forecast);
-            }
-          });
-       
+      getHighsAndLows(coordinates.x, coordinates.y).then((res) => {
+        if (res) {
+          setTemps(res);
+        }
+      });
+      getWeatherForecast(coordinates.x, coordinates.y).then((res) => {
+        if (res) {
+          let date = moment(res.date);
+          let formattedDate = date.format("MMMM Do [at] h:mma");
+          setForecastTime(formattedDate);
+          setForecast(res.forecast);
+        }
+      });
     }
-  }, [coordinates])
+  }, [coordinates]);
 
   return (
     <main style={{ backgroundImage: `url(/clouds.png)` }}>
-      <section className="search-section">
-        <div className={forecast ? "search-bar" : "centered-search-bar"}>
+      <section className={forecast ? "search-bar-section" : "centered-search-bar-section"}>
+        <div className="search-bar">
           <input
             id="street"
             placeholder="Street"
@@ -150,7 +144,11 @@ function App() {
           <img className="search-icon" src="./search.png" alt="search icon" onClick={() => checkInputs()}></img>
         </div>
       </section>
-      {error && <div className="spacer"><span>Please enter a valid street, city, and state. </span></div>}
+      {error && (
+        <div className="spacer">
+          <span>Please enter a valid street, city, and state. </span>
+        </div>
+      )}
       {forecast && !error && (
         <section className="todays-weather-section">
           <div className="weather-container">
@@ -160,7 +158,7 @@ function App() {
               <span className="temperature">{forecast[0].temperature}</span>
               <span className="temp-unit">{forecast[0].temperatureUnit}</span>
             </div>
-            <p className="detailed-forecast">{forecast[0].detailedForecast}</p>
+            <p className="detailed-forecast">{forecast[0].shortForecast}</p>
             {forecastTime && <p className="updated-time-text">Updated as of {forecastTime}</p>}
             <div>
               <div>
