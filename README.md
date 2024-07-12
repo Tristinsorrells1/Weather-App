@@ -44,7 +44,7 @@ While developing this app, I envisioned several features I would have loved to i
 
 ## How to Run Locally
 - Clone this repo (git clone <SSH key>)
-- Visit this [Link](https://cors-anywhere.herokuapp.com/corsdemo) and click request temporary access to demo server
+- Visit this [link](https://cors-anywhere.herokuapp.com/corsdemo) and click request temporary access to demo server
 - Run npm start
 
 ## Conclusion
