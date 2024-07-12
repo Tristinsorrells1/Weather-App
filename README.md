@@ -6,7 +6,7 @@
 [Preview of App](#preview-of-app) ~
 [Process](#process) ~
 [Priorities](#priorities) ~
-[Future Enhancements](#future-enhacements) ~
+[Future Enhancements](#future-enhancements) ~
 [Conclusion](#conclusion) ~
 [How to Run Locally](#how-to-run-locally)
 
