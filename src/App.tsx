@@ -2,7 +2,7 @@ import "./App.css";
 import moment from "moment";
 import WeatherContainer from "./WeatherContainer";
 import { useEffect, useState } from "react";
-import { getHighsAndLows, getWeatherForecast, getLatAndLong, ForecastType, CoordinatesType, AddressType, TemperaturesType, TemperatureType } from "./APICalls/APICalls";
+import { getHighsAndLows, getWeatherForecast, getLatAndLong, ForecastType, CoordinatesType, AddressType, TemperatureType } from "./APICalls/APICalls";
 
 function App() {
   const [coordinates, setCoordinates] = useState<CoordinatesType | undefined>(undefined);
@@ -21,7 +21,7 @@ function App() {
     if (forecast && temps) {
       convertTemps();
     }
-  }, [forecast]);
+  }, );
 
   const weatherIcon = (forecast: string): string | undefined => {
     if (forecast.includes("Sunny") || forecast.includes("Clear")) {
