@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# 🌥☀️ Weather App Coding Challenge ☀️🌥
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+First, thank you for the opportunity to demonstrate my technical skills through this coding challenge! This README will walk you through my typical process when creating a project from scratch and outline the priorities and future enhancements I considered during development.
 
-## Available Scripts
 
-In the project directory, you can run:
+<img width="1433" alt="Screenshot 2024-07-11 at 7 38 19 PM" src="https://github.com/user-attachments/assets/4945c928-d786-404d-9aab-39a8e2c88710">
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Process
+1. Research and Documentation
+- Every successful project starts with a documentation deep dive! I began by exploring the public weather and geocoding REST APIs. By examining the data, I imagined various use cases for a weather app from the user's perspective. This approach helped me determine the critical data to display and allowed me to draft a data schema for the project.
+2. Design Inspiration
+- I'll be honest, I seek design inspiration from existing apps and websites to enhance the UI/UX. I particularly enjoy using Dribble for design ideas, which helped me conceptualize a visually appealing and functional weather app.
+3. Wireframing
+- With a general UI in mind, I created a wireframe using Miro. This step ensured a clear visual representation of the app's layout and user flow before diving into the code.
+4. Development
+- I started coding by creating a static layout, focusing on the structure and appearance. Once the layout was finalized, I integrated the network requests to make the page dynamic and functional.
 
-### `npm test`
+## Priorities
+My top priority as a software engineer is always to achieve the MVP (Minimum Viable Product) on or before the deadline. Given the tight timeframe (Wednesday evening to Friday morning) and my full-time job at Ascent Integrated Tech, I had to prioritize getting the project done over doing everything I typically would for a full project. If I had more time, I would prioritize the following:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Responsiveness
+- I like to adopt a mobile-first approach and use media queries to ensure the layout is responsive across all devices. However, for this challenge, I focused on optimizing the desktop experience since that's how it will be presented.
+2. Testing
+- Given more time, I would write End-to-End tests using Cypress. Cypress allows me to mock network requests and validate the app's behavior in various scenarios, ensuring reliability and robustness.
+3. Performance Testing
+- I utilize Google Lighthouse for performance audits, which helps me enhance the app's speed, performance, and overall user experience. This step is crucial for delivering a high-quality product.
 
-### `npm run build`
+## Future Enhancements
+While developing this app, I envisioned several features I would have loved to include if I had more time:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Day/Night UI: Implementing different UIs for daytime and nighttime to provide a more immersive experience.
+- Weather Animations: Adding animations corresponding to the day's weather (e.g., rain and lightning animations for rainy days) to make the app more engaging.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Conclusion
+Thank you again for this opportunity. This project reflects my commitment to delivering quality work within tight deadlines and my enthusiasm for continuous improvement. I look forward to presenting this project to you! 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
