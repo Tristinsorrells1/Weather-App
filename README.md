@@ -1,9 +1,19 @@
 # 🌥☀️ Weather App Coding Challenge ☀️🌥
 
+## Table of Contents
+
+[Introduction](#introduction) ~
+[Process](#process) ~
+[Priorities](#priorities) ~
+[Preview of App](#preview-of-app) ~
+[Technologies](#technologies) ~
+[Contributors](#contributors) ~
+[Sources](#sources)
+
 ## Introduction
 First, thank you for the opportunity to demonstrate my technical skills through this coding challenge! This README will walk you through my typical process when creating a project from scratch and outline the priorities and future enhancements I considered during development.
 
-
+## Preview of App
 <img width="1433" alt="Screenshot 2024-07-11 at 7 38 19 PM" src="https://github.com/user-attachments/assets/4945c928-d786-404d-9aab-39a8e2c88710">
 
 
