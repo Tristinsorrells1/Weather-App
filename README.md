@@ -7,7 +7,7 @@
 [Process](#process) ~
 [Priorities](#priorities) ~
 [Future Enhancements](#future-enhancements) ~
-[How to Run Locally](#how-to-run-locally)
+[How to Run Locally](#how-to-run-locally) ~
 [Conclusion](#conclusion) ~
 
 ## Introduction
