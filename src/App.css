@@ -136,6 +136,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: red;
 }
 
 .spacer > span {
@@ -148,4 +149,9 @@ input {
  margin: 0 5px;
  border: 1px solid black;
  text-indent: 5px;
+}
+
+.loading-sign {
+  height: 120px;
+  width: auto;
 }

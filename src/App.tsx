@@ -16,22 +16,19 @@ function App() {
   const [city, setCity] = useState<string | undefined>(undefined);
   const [state, setState] = useState<string | undefined>(undefined);
   const [error, setError] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (forecast && temps) {
-      convertTemps();
-    }
-  }, );
+  const [loading, setLoading] = useState<boolean>(false);
 
   const weatherIcon = (forecast: string): string | undefined => {
-    if (forecast.includes("Sunny") || forecast.includes("Clear")) {
+    if (forecast.includes("Partly Sunny")) {
+      return "/partly-sunny.png";
+    } else if (forecast.includes("Sunny") || forecast.includes("Clear")) {
       return "/sun.png";
     } else if (forecast.includes("Rain") || forecast.includes("Showers")) {
       return "/rain.png";
     } else if (forecast.includes("Cloudy")) {
       return "/cloudy.png";
     } else {
-      return undefined;
+      return "/thermometer.png";
     }
   };
 
@@ -55,6 +52,7 @@ function App() {
 
         setHighs(convertedHighTemps);
         setLows(convertedLowTemps);
+        setLoading(false);
       }
     }
   };
@@ -77,6 +75,9 @@ function App() {
     if (!state || !city || !street) {
       return;
     }
+
+    setLoading(true);
+    setForecast(undefined);
 
     getLatAndLong(street, city, state).then((res) => {
       if (res) {
@@ -112,6 +113,12 @@ function App() {
       });
     }
   }, [coordinates]);
+
+  useEffect(() => {
+    if (forecast && temps) {
+      convertTemps();
+    }
+  }, [forecast, temps]);
 
   return (
     <main style={{ backgroundImage: `url(/clouds.png)`, backgroundSize: "cover" }}>
@@ -149,7 +156,8 @@ function App() {
           <span>Please enter a valid street, city, and state. </span>
         </div>
       )}
-      {forecast && !error && (
+      {!error && loading && <img className="loading-sign" src="loading.svg" />}
+      {forecast && !error && !loading && (
         <section className="todays-weather-section">
           <div className="weather-container">
             {address && <span className="location">{`${address.city}, ${address.state}`}</span>}
@@ -177,7 +185,7 @@ function App() {
           </div>
         </section>
       )}
-      <section className="weekly-weather-section">{forecast && !error && <WeatherContainer highs={highs} lows={lows} forecast={forecast} weatherIcon={weatherIcon} />}</section>
+      <section className="weekly-weather-section">{forecast && !error && !loading && <WeatherContainer highs={highs} lows={lows} forecast={forecast} weatherIcon={weatherIcon} />}</section>
     </main>
   );
 }
